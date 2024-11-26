@@ -1,0 +1,109 @@
+header{
+    height:150vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+.headerContainer{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+.header-img{
+    width: 100%;
+    height: auto;
+}
+
+/* CTA */
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* Socials */
+.headerSocials{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    bottom:2rem ;
+    left: 0;
+}
+/* for that line on the social */
+.headerSocials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background:var(--color-primary);
+}
+
+/* me */
+.me {
+    background: var(--color-primary);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 1.5rem 0 0 0;    
+}
+/* scroll down */
+.scrollDown{
+    position: absolute;
+    right:-2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/*======= media queries ======== */
+/* small devices */
+/* @media screen and (max-width:480px) {
+    
+    .header-img{
+        display: block;
+        border: solid 2px black;
+        width: 500px;
+        height: 1000px;
+    }
+    .header-img img{
+        width: 100%;
+        height: 1480px;
+    }
+} */
+@media screen and (max-width:600px) {
+    header{
+        height: 90vh !important;
+        object-fit: contain;
+    }
+    .headerSocials, .scrollDown{
+        display: none;
+    }
+    .header-img{
+        width: 100%;
+        height: auto;
+    }
+    .header-img img{
+        width: 100%;
+        background: transparent;
+    }
+}
+/* medium devices */
+@media screen and (max-width:1024px) {
+    header{
+        height: 135vh;
+    }
+    
+}
+/* large devices */
+@media screen and (min-width:1100px) {
+    header{
+        height: 90vh;
+    }
+    
+}
